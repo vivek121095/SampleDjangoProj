@@ -1,0 +1,14 @@
+{% extends "basic_app/base.html" %}
+{% block title_block %}
+HOME
+{% endblock %}
+{% block body_block %}
+  <div class="jumbotron">
+  <h1>Welcome to HOMEPAGE,</h1>
+    {% if user.is_authenticated %}
+      <p>{{ user.username }}</p>
+    {% else %}
+      <h2>Please login to continue</h2>
+    {% endif %}
+  </div>
+{% endblock %}
